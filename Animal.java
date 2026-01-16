@@ -80,8 +80,7 @@ public class Animal {
       }
    }
    public static void main(String[] args) {
-      Animal animal1 = new Animal();
-      System.out.println(animal1.getAnimalType());
+
    }
 }  
   
