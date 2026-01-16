@@ -66,7 +66,7 @@ public class Animal {
     // HINT: Decide how many animal types you want to be able to create, pick a random number
     // and then use if/else/if statements to determine what the animal should say
    public static String randomAnimalType() {
-      int randomNumber = (int) Math.random() * 5;
+      int randomNumber = (int) (Math.random() * 5);
       if (randomNumber > 4) {
          return "Cow";
       } else if (randomNumber > 3) {
@@ -80,7 +80,8 @@ public class Animal {
       }
    }
    public static void main(String[] args) {
-   
+      Animal animal1 = new Animal();
+      System.out.println(animal1.getAnimalType());
    }
 }  
   
