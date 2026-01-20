@@ -28,11 +28,11 @@ public class Cage {
     // toString():
     // - Friendly cage description including the animal.
    public String toString() {
-      return "Animal in the cage is a" + animal;
+      return "Animal in the cage is a " + getAnimal();
    }
     
    public static void main(String[] args) {
       Cage cage1 = new Cage();
-      System.out.println();
+      System.out.println(cage1);
    }
 }
