@@ -7,6 +7,7 @@ public class Cage {
     // Hint: Animal() can choose a random type.
    public Cage() {
       Animal animal1 = new Animal();
+
    }
 
     // Constructor with Animal parameter:
