@@ -36,7 +36,6 @@ public class Zoo {
    private Cage cage1;
    private Cage cage2;
    private Cage cage3;
-   private static int numAnimals;
    
     // CONSTRUCTORS
     // 1) No-arg constructor:
@@ -44,25 +43,25 @@ public class Zoo {
     //    - each cage should start with a random Animal
     //    Hint: Cage() can create a random Animal by calling new Animal()
     public Zoo() {
-      Cage cage1 = new Cage();
-      Cage cage2 = new Cage();
-      Cage cage3 = new Cage();
+      cage1 = new Cage();
+      cage2 = new Cage();
+      cage3 = new Cage();
     }
 
     // 2) Overloaded constructor:
     //    - takes 3 Animal parameters and places them into the 3 cages
     //    - must demonstrate constructor overloading and use "this." at least once
     public Zoo(Animal a1, Animal a2, Animal a3) {
-        Cage cage1 = new Cage(a1);
-        Cage cage2 = new Cage(a2);
-        Cage cage3 = new Cage(a3);
+        this.cage1 = new Cage(a1);
+        this.cage2 = new Cage(a2);
+        this.cage3 = new Cage(a3);
     }
 
     // howManyAnimals():
     // Returns the number of Animal objects that have been created so far.
     // Hint: use a static/class variable (and likely a static accessor) in Animal.
-    public int howManyAnimals() {
-         return numAnimals;
+    public static int howManyAnimals() {
+         return Animal.getNumAnimals();
     }
 
     // putAnimalInCage(Cage cage, Animal animal):
@@ -70,18 +69,35 @@ public class Zoo {
     // - If the Cage does NOT belong to this Zoo, do nothing and return false.
     // Note: do NOT create any new cages here.
     public boolean putAnimalInCage(Cage cage, Animal animal) {
+        if (cage == cage1) {
+           cage1.setAnimal(animal);
+        } else if (cage == cage2) {
+           cage2.setAnimal(animal);
+        } else if (cage == cage3) {
+           cage3.setAnimal(animal);
+        } else {
+           return false;
+        }
         return true;
     }
-
+   public Cage getCage1() {
+      return cage1;
+   }
+   public Cage getCage2() {
+      return cage2;
+   }
+   public Cage getCage3() {
+      return cage3;
+   }
 
     // toString():
     // Return a multi-line description of the Zoo including each cage (and the animal inside).
     public String toString() {
-      // return "Cage 1 has a " + cage1.getAnimal() + "\nCage 2 has a " + cage2.getAnimal() + "\nCage 3 has a " + cage3.getAnimal();
-      return cage1.toString();
+       return "   Zoo:\nCage 1: " + cage1 + "\nCage 2: " + cage2 + "\nCage 3: " + cage3;
     }
     public static void main(String[] args) {
        Zoo zoo = new Zoo();
        System.out.println(zoo);
+       System.out.println("\nNumber of animals in the zoo: " + howManyAnimals());
     }
 }

@@ -21,7 +21,7 @@ public class Animal {
 
     // Create a getter/accessor method that returns the static variable that counts how many
     // animals have been instatiated
-   public int getNumAnimals() {
+   public static int getNumAnimals() {
       return numAnimals;
    }
 
@@ -36,13 +36,13 @@ public class Animal {
     // Creat a speak() method that uses the animal type and returns
     // a sound based on the animal type. You can just return a String with the animal noise
    public String speak() {
-      if (animalType.equals("Cow")) {
+      if (animalType.equals("cow")) {
          return "moo";
-      } else if (animalType.equals("Horse")) {
+      } else if (animalType.equals("horse")) {
          return "neigh";
-      } else if (animalType.equals("Pig")) {
+      } else if (animalType.equals("pig")) {
          return "oink";
-      } else if (animalType.equals("Cat")) {
+      } else if (animalType.equals("cat")) {
          return "meow";
       } else {
          return "bark";
@@ -61,7 +61,7 @@ public class Animal {
 
     // Create the toString() method which returns friendly description of the animal
    public String toString() {
-      return "Animal sound is " + speak() + "\nAnimal sound backward is " + speakBackward();
+      return "\n Animal sound is " + speak() + "\n Animal sound backward is " + speakBackward();
    }
     // Create a static method called "randomAnimalType" that returns a random
     // animale type
@@ -70,20 +70,15 @@ public class Animal {
    public static String randomAnimalType() {
       int randomNumber = (int) (Math.random() * 5);
       if (randomNumber > 4) {
-         return "Cow";
+         return "cow";
       } else if (randomNumber > 3) {
-         return "Horse";
+         return "horse";
       } else if (randomNumber > 2) {
-         return "Pig";
+         return "pig";
       } else if (randomNumber > 1) {
-         return "Cat";
+         return "cat";
       } else {
-         return "Dog";
+         return "dog";
       }
    }
-   public static void main(String[] args) {
-       Animal animal1 = new Animal("Cat");
-       System.out.println(animal1);
-   }
-}  
-  
+}

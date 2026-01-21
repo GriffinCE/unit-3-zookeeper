@@ -6,7 +6,7 @@ public class Cage {
     // - Instantiates this cage with a random Animal.
     // Hint: Animal() can choose a random type.
    public Cage() {
-      Animal animal1 = new Animal();
+      animal = new Animal();
 
    }
 
@@ -29,7 +29,7 @@ public class Cage {
     // toString():
     // - Friendly cage description including the animal.
    public String toString() {
-      return "Animal in the cage is a " + getAnimal();
+      return "Animal in the cage is a " + animal.getAnimalType() + animal;
    }
     
    public static void main(String[] args) {
