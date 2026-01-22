@@ -42,8 +42,8 @@ public class Animal {
          return "neigh";
       } else if (animalType.equals("pig")) {
          return "oink";
-      } else if (animalType.equals("cat")) {
-         return "meow";
+      } else if (animalType.equals("lion")) {
+         return "roar";
       } else {
          return "bark";
       }
@@ -76,7 +76,7 @@ public class Animal {
       } else if (randomNumber > 2) {
          return "pig";
       } else if (randomNumber > 1) {
-         return "cat";
+         return "lion";
       } else {
          return "dog";
       }
