@@ -69,13 +69,13 @@ public class Animal {
     // and then use if/else/if statements to determine what the animal should say
    public static String randomAnimalType() {
       int randomNumber = (int) (Math.random() * 5);
-      if (randomNumber > 4) {
+      if (randomNumber >= 4) {
          return "cow";
-      } else if (randomNumber > 3) {
+      } else if (randomNumber >= 3) {
          return "horse";
-      } else if (randomNumber > 2) {
+      } else if (randomNumber >= 2) {
          return "pig";
-      } else if (randomNumber > 1) {
+      } else if (randomNumber >= 1) {
          return "lion";
       } else {
          return "dog";
